@@ -4,10 +4,14 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
-
-	@Test
-	void contextLoads() {
+@RestController
+public class DemoApplicationTests {
+	public static void main(String[] args){
+		SpringBootTest.run(DemoApplication)
 	}
+	@RequestMapping("/")
+ String sayHello() {
+ 	return "Hello Azure!";
+ }
 
 }
